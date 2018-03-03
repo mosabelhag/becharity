@@ -188,16 +188,208 @@ input.btn-search {
   color: #dd4b39;
 }
 
+/* NOTE: start of main-menu */
+
+.main-menu {
+  background-color: #fff;
+  padding: 18px 0 0;
+  margin: 0 auto;
+}
+
+.main-menu .logo a img {
+  max-width: 230px;
+}
+
+ul.nav.navbar-nav a {
+  line-height: 2em;
+  padding: 24px 18px;
+  font-size: 15px;
+  color: inherit;
+}
+
+ul.nav.navbar-nav li a:hover {
+  color: #ff3450;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+.dropdown-menu>li>a {
+  padding: 10px 20px !important;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+  text-decoration: none;
+  background-color: inherit !important;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: inherit !important;
+    border-color: none;
+}
+
+.main-menu .cart i {
+  display: block;
+  text-align: center;
+  line-height: 3em;
+  font-size: 1.4em;
+  margin-bottom: -18px;
+  color: #2867de;
+}
+
+.main-menu .amount {
+  display: block;
+  text-align: center;
+  line-height: 1em;
+  font-size: 15px;
+  background: #ff3450;
+  border-radius: 1px;
+  color: #fff;
+  margin-top: -7px;
+  padding: 5px 1px;
+  max-width: 46%;
+  margin: 0 auto;
+}
+
+/* NOTE: start of slider */
+
+.slider {
+overflow: hidden;
+}
+
+.slider .item {
+    position: relative;
+    overflow: hidden;
+    height: 495px;
+}
+
+#owl-demo .item img {
+    display: block;
+    height: auto;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.slider .item .content{
+  margin-top: 20vh;
+  text-align: left;
+  color: #fff;
+  z-index: 2;
+}
+.slider .item .content h2 {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 3em;
+    margin: 0 0 11px;
+    line-height: 1.2;
+}
+
+.slider .item .content p {
+    color: #fff;
+    margin-bottom: 50px;
+    opacity: 0.8;
+    line-height: 1.8;
+}
+
+.btn-slider {
+    background: #FF3450;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #fff;
+}
+.btn-slider:hover {
+    background: #3872e0;
+    color: #fff;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 15px;
+    height: 15px;
+    margin: 8px 7px;
+    background: #ff3450;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 50%;
+}
+
+/* NOTE: start of facts */
+.facts {
+    background-position: center center;
+    background-image: url(../images/fun-fact.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.facts .facts-col {
+    overflow: hidden;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.facts .overlay {
+    background: rgba(255, 52, 80, 0.8);
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.fact-icon {
+    color: #ffffff;
+    float: left;
+    font-size: 45px;
+    padding: 0 15px 0 5px;
+    position: relative;
+}
+
+.facts .fact-desc {
+    display: inline-block;
+}
+
+.facts .fact-details {
+    float: left;
+}
+
+.facts .fact-count {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    position: relative;
+}
+
+.facts .fact-info {
+    color: #fff;
+    margin-top: 5px;
+    position: relative;
+}
+
+.facts-col:nth-child(even) .overlay {
+    background: rgba(40, 103, 219, 0.6);
+}
+
 /* NOTE: Main css style */
 
 body {
   font-size: normal;
   line-height: 15px;
-  overflow: hidden;
+  overflow-x: hidden;
   color: #7f7f7f;
   background: #fff;
   margin: 0 auto;
   font-family: 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif;
+  height: 5000px;
 }
 
 .uppercase {
@@ -208,6 +400,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #333333;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+}
+
+span.icon-bar {
+  background: #ff3450;
 }
 
 /* NOTE: loader section */
@@ -374,4 +570,32 @@ h1, h2, h3, h4, h5, h6 {
   /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
   transition: all 0.3s 1s ease-out;
   /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+
+
+
+/* custom responive fix */
+
+@media (max-width:992px) {
+  .logo {
+      margin: 0 auto;
+      text-align: center;
+      margin: 14px;
+  }
+  .main-menu {
+    position: inherit !important;
+}
+.navbar-header {
+    background: #7f7f7f;
+}
+#owl-demo .item img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.slider .item .content {
+    margin-top: 20vh;
+    text-align: center;
+    z-index: 2;
+}
 }
